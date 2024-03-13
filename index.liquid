@@ -3,5 +3,12 @@ layout: layout.liquid
 title: 11ty Boilerplate
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<h1 class="text-3xl font-bold underline">This is the start of the page</h1>
+
+<div x-data="{hello_world: $fetchjson('https://dummyjson.com/products/1', jsonItem='thumbnail')}">
+    <img alt="thumbnail" x-bind:src="hello_world"/>
+</div>
+
+<p class= "text-sm font-bold text-red-900">Sometimes the thumbnail will load and sometimes it won't. It is very inconsistent.</p>
+
+<h1 class="text-2xl text-gray-900" text-clifford">This is the end of the page</h1>
